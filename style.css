@@ -1,11 +1,14 @@
+/* Importación de fuentes */
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
 /* Estilos globales */
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: Ubuntu, Arial, sans-serif;
     background-color: #f4f4f4;
 }
 
-/* Encabezado (color corporativo púrpura) */
+/* Encabezado */
 header {
     background-color: #6A1B9A;  /* Púrpura profundo */
     color: #fff;
@@ -13,6 +16,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
 header h1 {
     margin: 0;
@@ -20,17 +24,29 @@ header h1 {
 .logout {
     color: #fff;
     text-decoration: none;
+    font-weight: bold;
 }
 
-/* Layout */
+/* Layout Principal */
 .container {
     display: flex;
     min-height: calc(100vh - 50px);
 }
+
+/* Navegación */
 nav {
-    width: 200px;
+    width: 220px;
     background-color: #512A7D;  /* Variante más oscura de púrpura */
     padding: 20px;
+    box-sizing: border-box;
+}
+nav h3 {
+    color: #fff;
+    font-size: 16px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid rgba(255,255,255,0.3);
+    padding-bottom: 5px;
 }
 nav ul {
     list-style: none;
@@ -45,17 +61,21 @@ nav ul li a {
     display: block;
     padding: 8px;
     border-radius: 4px;
+    transition: background-color 0.3s ease;
 }
 nav ul li a:hover {
     background-color: #6A1B9A;
 }
+
+/* Área principal */
 main {
     flex: 1;
     padding: 20px;
     background-color: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
-/* Tablas y botones */
+/* Tablas */
 table {
     width: 100%;
     border-collapse: collapse;
@@ -68,6 +88,11 @@ th, td {
     padding: 10px;
     text-align: left;
 }
+table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Botones */
 .button, a.button {
     display: inline-block;
     padding: 10px 15px;
@@ -76,12 +101,13 @@ th, td {
     text-decoration: none;
     border-radius: 4px;
     margin-bottom: 10px;
+    transition: background-color 0.3s ease;
 }
-a.button:hover {
+a.button:hover, .button:hover {
     background-color: #512A7D;
 }
 
-/* Estilos para formularios e inputs */
+/* Formularios */
 form {
     margin-bottom: 20px;
 }
@@ -109,25 +135,77 @@ form input[type="submit"] {
     padding: 10px 15px;
     border-radius: 4px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 form input[type="submit"]:hover {
     background-color: #512A7D;
 }
 
-/* Estilos para el formulario de login */
-.login-container {
+/* Estilos para Login y Registro */
+.login-container,
+.register-container {
     width: 300px;
     margin: 100px auto;
     padding: 20px;
     background: #fff;
     border: 1px solid #ccc;
     border-radius: 4px;
+    text-align: center;
 }
-.login-container h2 {
+.login-container img {
+    width: 100%;
+    margin-bottom: 10px;
+}
+.login-container h2,
+.register-container h1 {
     text-align: center;
 }
 .login-container .error {
     color: #D32F2F;
     text-align: center;
+}
+
+/* Controles de navegación de vistas */
+.controls {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.controls a {
+    display: inline-block;
+    margin: 0 10px;
+    padding: 8px 12px;
+    background-color: #6A1B9A;
+    color: #fff;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+.controls a:hover {
+    background-color: #512A7D;
+}
+.controls span {
+    font-weight: bold;
+    margin: 0 10px;
+}
+
+/* Calendario y Grilla */
+.calendar, .grid {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+.calendar th, .calendar td,
+.grid th, .grid td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: center;
+}
+.event {
+    background-color: rgba(106,27,154,0.1);
+    border: 1px solid #6A1B9A;
+    border-radius: 3px;
+    padding: 2px 4px;
+    margin-top: 3px;
+    font-size: 0.85em;
 }
 
