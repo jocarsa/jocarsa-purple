@@ -1,0 +1,133 @@
+/* Estilos globales */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+/* Encabezado (color corporativo púrpura) */
+header {
+    background-color: #6A1B9A;  /* Púrpura profundo */
+    color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header h1 {
+    margin: 0;
+}
+.logout {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Layout */
+.container {
+    display: flex;
+    min-height: calc(100vh - 50px);
+}
+nav {
+    width: 200px;
+    background-color: #512A7D;  /* Variante más oscura de púrpura */
+    padding: 20px;
+}
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+nav ul li {
+    margin-bottom: 10px;
+}
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    padding: 8px;
+    border-radius: 4px;
+}
+nav ul li a:hover {
+    background-color: #6A1B9A;
+}
+main {
+    flex: 1;
+    padding: 20px;
+    background-color: #fff;
+}
+
+/* Tablas y botones */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+table, th, td {
+    border: 1px solid #ccc;
+}
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+.button, a.button {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #6A1B9A;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+a.button:hover {
+    background-color: #512A7D;
+}
+
+/* Estilos para formularios e inputs */
+form {
+    margin-bottom: 20px;
+}
+form label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+form input[type="text"],
+form input[type="password"],
+form input[type="datetime-local"],
+form select,
+form textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+form input[type="submit"] {
+    background-color: #6A1B9A;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+form input[type="submit"]:hover {
+    background-color: #512A7D;
+}
+
+/* Estilos para el formulario de login */
+.login-container {
+    width: 300px;
+    margin: 100px auto;
+    padding: 20px;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.login-container h2 {
+    text-align: center;
+}
+.login-container .error {
+    color: #D32F2F;
+    text-align: center;
+}
+
